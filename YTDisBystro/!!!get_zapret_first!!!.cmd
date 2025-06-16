@@ -7,11 +7,14 @@ color f1
 PUSHD "%~dp0"
 
 :: Enter zapret version here ::
-set "zapret_ver=v71"
+set "zapret_ver=v71.1"
 
 IF "%PROCESSOR_ARCHITECTURE%"=="AMD64" (set "os_arch=64")
 IF "%PROCESSOR_ARCHITECTURE%"=="x86" (set "os_arch=32")
 IF DEFINED PROCESSOR_ARCHITEW6432 (set "os_arch=64")
+IF "%PROCESSOR_ARCHITECTURE%"=="AMD64" (set "os_arch2=x86_64")
+IF "%PROCESSOR_ARCHITECTURE%"=="x86" (set "os_arch2=x86")
+IF DEFINED PROCESSOR_ARCHITEW6432 (set "os_arch2=x86_64")
 
 cls
 if exist "%~dp0zapret-%zapret_ver%.zip" (
@@ -97,7 +100,7 @@ pause
 )
 echo Unpacking archive.....
 echo.
-unzip -jo "zapret-%zapret_ver%.zip" zapret-%zapret_ver%/binaries/win%os_arch%/winws.exe zapret-%zapret_ver%/binaries/win%os_arch%/WinDivert.dll zapret-%zapret_ver%/binaries/win%os_arch%/WinDivert%os_arch%.sys zapret-%zapret_ver%/binaries/win%os_arch%/cygwin1.dll
+unzip -jo "zapret-%zapret_ver%.zip" zapret-%zapret_ver%/binaries/windows-%os_arch2%/winws.exe zapret-%zapret_ver%/binaries/windows-%os_arch2%/WinDivert.dll zapret-%zapret_ver%/binaries/windows-%os_arch2%/WinDivert%os_arch%.sys zapret-%zapret_ver%/binaries/windows-%os_arch2%/cygwin1.dll
 del /F /Q "%~dp0zapret-%zapret_ver%.zip" > nul
 echo.
 color f2
@@ -105,7 +108,7 @@ echo Unpacking archive..... Completed!
 echo.
 echo.
 echo Download completed
-ping -n 10 127.0.0.1 > nul
+ping -n 6 127.0.0.1 > nul
 
 
 :ZapretStart
