@@ -1,7 +1,7 @@
 
 ---
 
-# Сборка YTDisBystro на основе zapret для Windows - Zapret от KDS
+# Сборка YTDisBystro на основе zapret для Windows
 
 > Простая и мощная сборка для обхода блокировок YouTube, Discord и других сайтов, заблокированных по различным причинам (через DPI, DNS, списки РКН и т.д.)
 
