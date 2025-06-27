@@ -36,8 +36,22 @@ if errorlevel 0 (
 TASKKILL /F /IM RBTray.exe /T
 regsvr32 /u /s "%~dp0tray\RBHook.dll"
 )
+echo .
+reg delete HKCU\Environment /f /v YTDB_AUTOTTL_OFF > nul
+reg delete HKCU\Environment /f /v YTDB_IPV6_OFF > nul
+reg delete HKCU\Environment /f /v YTDB_TTL_OFF > nul
+reg delete HKCU\Environment /f /v YTDB_TTL_NUM > nul
+reg delete HKCU\Environment /f /v YTDB_TLS_MAIN_SET > nul
+reg delete HKCU\Environment /f /v YTDB_TLS_MAIN_Custom > nul
 
-color fA
+reg delete HKCU\Environment /f /v YTDB_QUIC_MAIN_SET > nul
+reg delete HKCU\Environment /f /v YTDB_QUIC_MAIN_Custom > nul
+
+reg delete HKCU\Environment /f /v YTDB_TLS_MAIN2_SET > nul
+reg delete HKCU\Environment /f /v YTDB_TLS_MAIN2_Custom > nul
+
+reg delete HKCU\Environment /f /v YTDB_ZAPRET_LOG_ON > nul
+color fa
 echo.
 echo Очистка завершена...
 pause

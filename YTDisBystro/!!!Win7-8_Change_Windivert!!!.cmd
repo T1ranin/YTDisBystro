@@ -14,9 +14,7 @@ echo Press any key for exit
 pause > nul
 goto :EOF
 )
-
 if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
-
 for /f "skip=3 tokens=1,2,* delims=: " %%i in ('sc query "GoodbyeDPI"') do (
  if %%j==4 (
  color fc
@@ -131,4 +129,4 @@ echo.
 echo.
 echo Changing completed
 
-ping -n 6 127.0.0.1 > nul
+ping -n 5 127.0.0.1 > nul

@@ -1,6 +1,11 @@
+#Удалить, если браузер не поддерживает ECH
 nnmclub.to
 nnmstatic.win
-vsetop.org
+rutracker.org
+#Конец блока для удаления
+google.com
+nexusmods.com
+prod-www-cdn.dxo.com
 jnn-pa.googleapis.com
 twitch.tv
 ttvnw.net
@@ -12,7 +17,13 @@ escapefromtarkov.com
 browser-intake-datadoghq.com
 datadoghq.com
 gosuslugi.ru
+vk.com
 vkvideo.ru
 okcdn.ru
 api.mycdn.me
 rutube.ru
+yandex.ru
+ya.ru
+mail.ru
+rt.ru
+dom.ru

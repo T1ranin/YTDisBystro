@@ -108,7 +108,7 @@ echo Unpacking archive..... Completed!
 echo.
 echo.
 echo Download completed
-ping -n 6 127.0.0.1 > nul
+ping -n 5 127.0.0.1 > nul
 
 
 :ZapretStart
